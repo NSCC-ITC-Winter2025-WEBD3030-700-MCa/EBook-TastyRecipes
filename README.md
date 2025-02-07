@@ -12,6 +12,9 @@ Built with Gatsby,this is a static site perfect for aspiring chefs and home cook
 Navigate into the site’s directory to start it up. Commands are listed below.
 ```shell
 cd tasty-ebooks/
+nmp install
+npm install -g gatsby-cli
+## go to the gatsby-config.js and remove this line "'gatsby-plugin-ebook',"
 gatsby develop
 ```
 The site is now running at `http://localhost:8000`!

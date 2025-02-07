@@ -26,7 +26,6 @@ module.exports = {
       },
     },
 
-    'gatsby-plugin-ebook', 
   {
     resolve: "gatsby-source-filesystem",
     options: {
