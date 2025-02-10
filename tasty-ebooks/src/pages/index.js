@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Layout from '../components/layout';
 
 const IndexPage = () => {
   // Sample data for the card (you can replace this with dynamic data if needed)
@@ -10,6 +11,7 @@ const IndexPage = () => {
   };
 
   return (
+    <Layout>
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
       <h1>Welcome to My Recipe Site</h1>
       <div
@@ -40,6 +42,7 @@ const IndexPage = () => {
         </Link>
       </div>
     </div>
+    </Layout>
   );
 };
 
