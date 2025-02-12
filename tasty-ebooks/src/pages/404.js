@@ -7,6 +7,7 @@ const NotFoundPage = () => (
   <Layout>
     <div className="p-8 text-center">
       <h1 className="text-6xl font-bold mb-4">Oops! Page Not Found</h1>
+      {/* StaticImage component is used to display the 404 error image */}
       <StaticImage
         src="../images/404-error-page.png"
         alt="404 Page Not Found"
