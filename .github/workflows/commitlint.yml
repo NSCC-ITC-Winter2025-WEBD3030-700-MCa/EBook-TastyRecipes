@@ -15,5 +15,5 @@ jobs:
       pull-requests: read  # Permission to interact with pull requests (if needed)
     
     steps:
-      - name: Run commitlint
+        name: Run commitlint
         uses: opensource-nepal/commitlint@v1
