@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
       
-      {/* ✅ Navbar with Welcome Message */}
+      {/* ✅ Animated Navbar with Welcome Message */}
       <nav style={styles.navbar}>
         <div style={styles.navContainer}>
           <h1 style={styles.logo}>🍽️ RecipeSite</h1>
@@ -25,6 +25,7 @@ const IndexPage = () => {
         </div>
       </nav>
 
+      {/* ✅ Animated Recipe Card */}
       <div style={styles.card}>
         <h2 style={styles.cardTitle}>{cardData.title}</h2>
         <p style={styles.cardDescription}>{cardData.description}</p>
@@ -33,12 +34,17 @@ const IndexPage = () => {
         </Link>
       </div>
 
-      {/* ✅ Footer Added */}
+      {/* ✅ Footer with Social Media Links */}
       <footer style={styles.footer}>
         <p>&copy; {new Date().getFullYear()} RecipeSite. All Rights Reserved.</p>
         <div style={styles.footerLinks}>
           <Link to="/privacy" style={styles.footerLink}>Privacy Policy</Link>
           <Link to="/terms" style={styles.footerLink}>Terms of Service</Link>
+        </div>
+        <div style={styles.socialIcons}>
+          <a href="https://facebook.com" style={styles.socialLink}>📘</a>
+          <a href="https://twitter.com" style={styles.socialLink}>🐦</a>
+          <a href="https://instagram.com" style={styles.socialLink}>📷</a>
         </div>
       </footer>
 
@@ -46,13 +52,14 @@ const IndexPage = () => {
   );
 };
 
-/* ✅ Styles with Footer */
+/* ✅ Updated Styles with Animations */
 const styles = {
   navbar: {
     backgroundColor: '#333',
     padding: '15px 20px',
     width: '100%',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    transition: 'all 0.3s ease-in-out',
   },
   navContainer: {
     display: 'flex',
@@ -65,12 +72,14 @@ const styles = {
     color: 'white',
     fontSize: '1.8em',
     fontWeight: 'bold',
+    transition: 'transform 0.3s ease-in-out',
   },
   welcomeText: {
     color: 'white',
     fontSize: '1.3em',
     fontWeight: 'bold',
     textAlign: 'center',
+    animation: 'fadeIn 1.5s ease-in-out',
   },
   navLinks: {
     display: 'flex',
@@ -81,28 +90,14 @@ const styles = {
     color: 'white',
     fontSize: '1.1em',
     padding: '10px',
-    transition: 'color 0.3s ease',
+    transition: 'color 0.3s ease, transform 0.2s',
   },
-
-  /* ✅ Footer Styles */
-  footer: {
-    backgroundColor: '#222',
-    color: 'white',
-    textAlign: 'center',
-    padding: '20px',
-    marginTop: '40px',
-  },
-  footerLinks: {
-    marginTop: '10px',
-  },
-  footerLink: {
+  navLinkHover: {
     color: '#f39c12',
-    textDecoration: 'none',
-    margin: '0 10px',
-    fontSize: '0.9em',
+    transform: 'scale(1.1)',
   },
 
-  /* ✅ Card Styles */
+  /* ✅ Animated Card Styles */
   card: {
     border: '1px solid #ddd',
     borderRadius: '10px',
@@ -110,7 +105,8 @@ const styles = {
     maxWidth: '300px',
     margin: '20px auto',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    transition: 'transform 0.4s ease, box-shadow 0.4s ease',
+    animation: 'slideUp 1s ease-in-out',
   },
   cardTitle: {
     fontSize: '1.8em',
@@ -129,7 +125,55 @@ const styles = {
     borderRadius: '5px',
     fontWeight: 'bold',
     display: 'inline-block',
-  }
+    transition: 'background 0.3s ease, transform 0.2s',
+  },
+  cardButtonHover: {
+    backgroundColor: '#2980b9',
+    transform: 'scale(1.05)',
+  },
+
+  /* ✅ Footer with Social Media Links */
+  footer: {
+    backgroundColor: '#222',
+    color: 'white',
+    textAlign: 'center',
+    padding: '20px',
+    marginTop: '40px',
+  },
+  footerLinks: {
+    marginTop: '10px',
+  },
+  footerLink: {
+    color: '#f39c12',
+    textDecoration: 'none',
+    margin: '0 10px',
+    fontSize: '0.9em',
+    transition: 'color 0.3s ease',
+  },
+  socialIcons: {
+    marginTop: '15px',
+    fontSize: '1.5em',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '15px',
+  },
+  socialLink: {
+    textDecoration: 'none',
+    transition: 'transform 0.3s ease',
+  },
+  socialLinkHover: {
+    transform: 'scale(1.2)',
+  },
+
+  /* ✅ Animations */
+  '@keyframes fadeIn': {
+    '0%': { opacity: 0 },
+    '100%': { opacity: 1 },
+  },
+  '@keyframes slideUp': {
+    '0%': { transform: 'translateY(20px)', opacity: 0 },
+    '100%': { transform: 'translateY(0)', opacity: 1 },
+  },
 };
 
 export default IndexPage;
