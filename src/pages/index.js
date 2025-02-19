@@ -11,7 +11,18 @@ const IndexPage = () => {
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
+      {/* Logo Image */}
+      <img 
+        src="tasty.jpg" 
+        alt="Recipe Site Logo"
+        style={{
+          maxWidth: '200px',  
+          marginBottom: '20px',
+        }}
+      />
+      
       <h1>Welcome to My Recipe Site</h1>
+      
       <div
         style={{
           border: '1px solid #ddd',
