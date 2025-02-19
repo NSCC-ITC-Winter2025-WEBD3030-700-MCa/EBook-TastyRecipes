@@ -11,10 +11,7 @@ const IndexPage = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   useEffect(() => {
-    // Set the saved theme to the body
     document.body.classList.add(theme);
-
-    // Add light or dark theme classes to the body
     if (theme === 'light') {
       document.body.style.backgroundColor = '#EBF9EC'; // Light background
       document.body.style.color = '#333'; 
