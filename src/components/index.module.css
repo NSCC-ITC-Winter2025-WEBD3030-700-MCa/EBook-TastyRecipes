@@ -18,19 +18,19 @@
 }
 
 .listItem::marker {
-  color: #e95800;
+  color: #FF8C42;  /* Warm orange */
 }
 
 .listItem:nth-child(2)::marker {
-  color: #159bf3;
+  color: #D63447;  /* Deep red */
 }
 
 .listItem:nth-child(3)::marker {
-  color: #8eb814;
+  color: #5A3E36;  /* Dark brown */
 }
 
 .listItem:nth-child(4)::marker {
-  color: #663399;
+  color: #8EB814;  /* Olive green */
 }
 
 .listItemLink {
@@ -43,6 +43,7 @@
   margin-bottom: 0;
   margin-top: var(--space-1);
 }
+
 
 .textCenter {
   text-align: center;

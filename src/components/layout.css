@@ -1,9 +1,9 @@
 :root {
-  --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
-  --color-code-bg: #fff4db;
-  --color-code: #8a6534;
+  --border-radius: 8px;
+  --color-text: #5A3E36;       /* Dark brown for text */
+  --color-primary: #FF8C42;    /* Warm orange for primary elements */
+  --color-code-bg: #FAF3DD;    /* Soft cream for code backgrounds */
+  --color-code: #D63447;       /* Deep red for code text */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -25,6 +25,7 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
+
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -34,29 +35,28 @@ html {
   overflow-y: scroll;
 }
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  background-color: #FAF3DD;  /* Soft cream background */
   color: var(--color-text);
-  font-family: sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
 }
+
 a {
   background-color: transparent;
   color: var(--color-primary);
   text-decoration: none;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+  font-weight: 600;
+  border-bottom: 2px solid #D63447; /* Deep red underline */
+  text-underline-offset: 3px;
 }
-a:active,
+
 a:hover {
-  outline-width: 0;
-  text-decoration: none;
+  color: #D63447;
+  border-bottom: 2px solid var(--color-primary);
 }
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
@@ -221,4 +221,19 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
+}
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px 16px;
+  font-size: var(--font-md);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #D63447;
 }
