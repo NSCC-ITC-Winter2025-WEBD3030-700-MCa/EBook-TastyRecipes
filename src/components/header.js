@@ -13,17 +13,21 @@ const Header = ({ siteTitle }) => (
       justifyContent: `space-between`,
     }}
   >
+    <Link
+      to="/"
+      style={{
+        fontSize: `var(--font-sm)`,
+        textDecoration: `none`,
+      }}
+    >
+      {siteTitle}
+    </Link>
     <img
-      alt="Recipe logo"
-      style={{ margin: 0, maxWidth: "100%", height: "40px" }}
-      src={RecipeLogo}
+      alt="Gatsby logo"
+      height={20}
+      style={{ margin: 0 }}
+      src="./public/tasty.jpg"
     />
-
-      <nav style={{ display: "flex", gap: "20px" }}>
-        <Link to="/" style={{ color: "black", textDecoration: "none" }}>Home</Link>
-        
-        <Link to="/about" style={{ color: "black", textDecoration: "none" }}>About</Link>
-      </nav>
   </header>
 )
 
