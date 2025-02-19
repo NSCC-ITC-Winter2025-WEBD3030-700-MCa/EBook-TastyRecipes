@@ -21,6 +21,9 @@ const IndexPage = () => {
         }}
       >
         <h1>Welcome to My Recipe Site</h1>
+        <h2 style={{ fontSize: "1.2em", color: "#555", marginBottom: "30px", textAlign: "center", width: "100%"}}>
+          Discover delicious recipes from around the world. <br/> Whether you're a beginner or a seasoned chef, <br/> our collection of recipes will inspire your next meal.
+        </h2>
         <div
           style={{
             border: "1px solid #ddd",
