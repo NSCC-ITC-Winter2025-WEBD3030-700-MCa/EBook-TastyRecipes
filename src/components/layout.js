@@ -23,28 +23,25 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
+    
+        <main style={{ flex: 1 }}>{children}</main>
         <footer
           style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+            marginTop: "auto",
+            fontSize: "var(--font-sm)",
+            padding: "1rem",
+            background: "#f8f8f8",
+            textAlign: "center",
           }}
         >
           © {new Date().getFullYear()} &middot; Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com">Kyle Stevens; Tonnette Cunningham; Bhavya Mungra; Josh Runas</a>
         </footer>
       </div>
-    </>
+    
   )
 }
 
