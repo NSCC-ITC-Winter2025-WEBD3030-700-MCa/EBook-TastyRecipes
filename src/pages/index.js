@@ -8,6 +8,9 @@ const IndexPage = () => {
     { id: 2, title: 'Vegetable Stir-Fry', imageurl: "", category: 'Vegetarian', description: 'Healthy and delicious', link: '/recipes/vegetarian-stir-fry' },
     { id: 3, title: 'Chocolate Cake', imageurl: "", category: 'Desserts', description: 'Sweet and rich dessert', link: '/recipes/chocolate-cake' },
     { id: 4, title: 'Classic Lasagna', imageurl: "", category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
+    { id: 5, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
+    { id: 6, title: 'Bread', imageurl: "/images/bread.jpg", category: 'Baking', description: 'A classic white bread recipe', link: '/recipes/bread' },
+
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -72,7 +75,7 @@ const IndexPage = () => {
       <div style={styles.categories}>
         <h3>Select a Category:</h3>
         <div style={styles.categoryButtons}>
-          {['All', 'Pasta', 'Vegetarian', 'Desserts'].map(category => (
+          {['All', 'Pasta', 'Vegetarian', 'Desserts', 'Sides'].map(category => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -100,8 +103,7 @@ const IndexPage = () => {
 
       {/* ✅ Footer */}
       <footer style={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} RecipeSite. All Rights Reserved.</p>
-        
+
         {/* ✅ Social Media Icons */}
         <div style={styles.socialIcons}>
           <a href="" target="_blank" rel="noopener noreferrer">
@@ -116,6 +118,10 @@ const IndexPage = () => {
           <Link to="/privacy" style={styles.footerLink}>Privacy Policy</Link>
           <Link to="/terms" style={styles.footerLink}>Terms of Service</Link>
         </div>
+
+        <div style={styles.copyright}>
+      <p >&copy; {new Date().getFullYear()} RecipeSite. All Rights Reserved.</p>
+      </div>
       </footer>
 
     </div>
@@ -125,11 +131,13 @@ const IndexPage = () => {
 /* ✅ Updated Styles */
 const styles = {
   navbar: {
-    backgroundColor: '#222',
+    fontFamily: 'Pacifico, sans-serif',
+    backgroundColor: '#CCFFE5',
     padding: '15px 20px',
     width: '100%',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     transition: 'all 0.3s ease-in-out',
+    borderRadius:'10px'
   },
   navContainer: {
     display: 'flex',
@@ -138,16 +146,20 @@ const styles = {
     maxWidth: '1100px',
     margin: '0 auto',
   },
+  copyright: {
+    marginBottom: '10px', 
+  },
   logo: {
-    color: 'white',
-    fontSize: '1.8em',
+    color: '#003300',
+    fontSize: '1.3em',
     fontWeight: 'bold',
   },
   welcomeText: {
-    color: 'white',
-    fontSize: '1.3em',
+    color: '#003300',
+    fontSize: '2rem',
     fontWeight: 'bold',
     textAlign: 'center',
+    textShadow: '2px 2px 2px rgba(0, 0, 0, 0.5)',  
   },
   navLinks: {
     display: 'flex',
@@ -155,10 +167,11 @@ const styles = {
   },
   navLink: {
     textDecoration: 'none',
-    color: 'white',
-    fontSize: '1.1em',
+    color: '#003300',
+    fontSize: '1rem',
     padding: '10px',
     transition: 'color 0.3s ease',
+    fontWeight:'bold',
   },
 
   /* ✅ Categories Section */
@@ -229,30 +242,35 @@ const styles = {
 
   /* ✅ Footer */
   footer: {
-    backgroundColor: '#222',
-    color: 'white',
+    backgroundColor: '#CCFFE5',
+    color: '#003300',
     textAlign: 'center',
-    padding: '20px',
+    padding: '10px',
     marginTop: '40px',
+    borderRadius: '10px',
+    display: 'flex',  
+    flexDirection: 'column',  
+    alignItems: 'center', 
   },
   socialIcons: {
     display: 'flex',
     justifyContent: 'center',
     gap: '15px',
-    marginTop: '10px',
   },
   icon: {
     width: '30px',
     height: '30px',
     transition: 'transform 0.3s',
   },
-  footerLinks: {
-    marginTop: '10px',
+  copyright:{
+    color: '#003300',
+    textDecoration: 'none',
+    fontSize: '0.9em',
+    fontWeight: 'bold',
   },
   footerLink: {
-    color: '#f39c12',
+    color: '#003300',
     textDecoration: 'none',
-    margin: '0 10px',
     fontSize: '0.9em',
     transition: 'color 0.3s ease',
   },
