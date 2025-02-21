@@ -24,3 +24,8 @@ When you open the URL above you should see a page that looks like to this
 Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
 
 
+## Live Deployed Site
+
+You can view the live version of the site at:
+
+[https://e-book-tasty-recipes.vercel.app/](https://e-book-tasty-recipes.vercel.app/)
