@@ -8,7 +8,8 @@ const IndexPage = () => {
     { id: 2, title: 'Vegetable Stir-Fry', imageurl: "", category: 'Vegetarian', description: 'Healthy and delicious', link: '/recipes/vegetarian-stir-fry' },
     { id: 3, title: 'Chocolate Cake', imageurl: "", category: 'Desserts', description: 'Sweet and rich dessert', link: '/recipes/chocolate-cake' },
     { id: 4, title: 'Classic Lasagna', imageurl: "", category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
-    { id: 4, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
+    { id: 5, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
+    { id: 6, title: 'Bread', imageurl: "/images/bread.jpg", category: 'Baking', description: 'A classic white bread recipe', link: '/recipes/bread' },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
