@@ -8,6 +8,7 @@ const IndexPage = () => {
     { id: 2, title: 'Vegetable Stir-Fry', imageurl: "", category: 'Vegetarian', description: 'Healthy and delicious', link: '/recipes/vegetarian-stir-fry' },
     { id: 3, title: 'Chocolate Cake', imageurl: "", category: 'Desserts', description: 'Sweet and rich dessert', link: '/recipes/chocolate-cake' },
     { id: 4, title: 'Classic Lasagna', imageurl: "", category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
+    { id: 4, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -72,7 +73,7 @@ const IndexPage = () => {
       <div style={styles.categories}>
         <h3>Select a Category:</h3>
         <div style={styles.categoryButtons}>
-          {['All', 'Pasta', 'Vegetarian', 'Desserts'].map(category => (
+          {['All', 'Pasta', 'Vegetarian', 'Desserts', 'Sides'].map(category => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
