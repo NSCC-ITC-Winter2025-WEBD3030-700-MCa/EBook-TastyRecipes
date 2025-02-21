@@ -4,10 +4,10 @@ import { Link } from 'gatsby';
 const IndexPage = () => {
   // Sample recipes data with categories
   const recipes = [
-    { id: 1, title: 'Delicious Spaghetti', category: 'Pasta', description: 'Indulge in foreign flavors', link: '/recipes/spaghetti' },
-    { id: 2, title: 'Vegetable Stir-Fry', category: 'Vegetarian', description: 'Healthy and delicious', link: '/recipes/vegetarian-stir-fry' },
-    { id: 3, title: 'Chocolate Cake', category: 'Desserts', description: 'Sweet and rich dessert', link: '/recipes/chocolate-cake' },
-    { id: 4, title: 'Classic Lasagna', category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
+    { id: 1, title: 'Delicious Spaghetti', imageurl: "/images/spaghetti.jpg", category: 'Pasta', description: 'Indulge in foreign flavors', link: '/recipes/spaghetti' },
+    { id: 2, title: 'Vegetable Stir-Fry', imageurl: "", category: 'Vegetarian', description: 'Healthy and delicious', link: '/recipes/vegetarian-stir-fry' },
+    { id: 3, title: 'Chocolate Cake', imageurl: "", category: 'Desserts', description: 'Sweet and rich dessert', link: '/recipes/chocolate-cake' },
+    { id: 4, title: 'Classic Lasagna', imageurl: "", category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -88,6 +88,7 @@ const IndexPage = () => {
       <div style={styles.recipeList}>
         {filteredRecipes.map(recipe => (
           <div key={recipe.id} style={styles.card}>
+            <img src={recipe.imageurl} alt={recipe.title} style={styles.cardImage} />
             <h2 style={styles.cardTitle}>{recipe.title}</h2>
             <p style={styles.cardDescription}>{recipe.description}</p>
             <Link to={recipe.link} style={styles.cardButton}>
