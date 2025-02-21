@@ -4,13 +4,14 @@ import RecipeLogo from "../images/recipe.png"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      width:"100%",
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
+     style={{
+      width: "100%",
+      padding: "20px 40px",
+      backgroundColor: "#333", // Dark background for contrast
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Soft shadow for depth
     }}
   >
     <Link
