@@ -100,6 +100,17 @@ const IndexPage = () => {
       {/* ✅ Footer */}
       <footer style={styles.footer}>
         <p>&copy; {new Date().getFullYear()} RecipeSite. All Rights Reserved.</p>
+        
+        {/* ✅ Social Media Icons */}
+        <div style={styles.socialIcons}>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <img src="/images/Facebook.png" alt="Facebook" style={styles.icon} />
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <img src="/images/Facebook.png" alt="Instagram" style={styles.icon} />
+          </a>
+        </div>
+
         <div style={styles.footerLinks}>
           <Link to="/privacy" style={styles.footerLink}>Privacy Policy</Link>
           <Link to="/terms" style={styles.footerLink}>Terms of Service</Link>
@@ -222,6 +233,17 @@ const styles = {
     textAlign: 'center',
     padding: '20px',
     marginTop: '40px',
+  },
+  socialIcons: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '15px',
+    marginTop: '10px',
+  },
+  icon: {
+    width: '30px',
+    height: '30px',
+    transition: 'transform 0.3s',
   },
   footerLinks: {
     marginTop: '10px',
