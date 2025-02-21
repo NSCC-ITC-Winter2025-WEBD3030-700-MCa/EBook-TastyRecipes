@@ -10,7 +10,6 @@ const IndexPage = () => {
     { id: 4, title: 'Classic Lasagna', imageurl: "", category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
     { id: 5, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
     { id: 6, title: 'Bread', imageurl: "/images/bread.jpg", category: 'Baking', description: 'A classic white bread recipe', link: '/recipes/bread' },
-
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -61,7 +60,7 @@ const IndexPage = () => {
       {/* ✅ Navbar with Welcome Message */}
       <nav style={styles.navbar}>
         <div style={styles.navContainer}>
-          <h1 style={styles.logo}>🍽️ RecipeSite</h1>
+          <h1 style={styles.logo}>🍽️ Tasty Recipes</h1>
           <h2 style={styles.welcomeText}>Welcome to My Recipe Site</h2>
           <div style={styles.navLinks}>
             <Link to="/" style={styles.navLink}>Home</Link>
