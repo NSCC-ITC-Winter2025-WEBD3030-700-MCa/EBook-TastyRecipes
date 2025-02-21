@@ -11,7 +11,6 @@ Built with Gatsby,this is a static site perfect for aspiring chefs and home cook
 ## 🚀 Quick start
 Navigate into the site’s directory to start it up. Commands are listed below.
 ```shell
-cd tasty-ebooks/
 npm install
 npm install -g gatsby-cli
 gatsby develop
