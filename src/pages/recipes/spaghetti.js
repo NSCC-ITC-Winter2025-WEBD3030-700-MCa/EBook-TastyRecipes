@@ -5,7 +5,7 @@ export default function Component() {
   return (
     <div className="recipe-container">
       <h1 className="title">How to Make Spaghetti With Meat Sauce</h1>
-      <h4 className="author"><b>By: Marc Matsumoto</b> <a href="https://www.w3schools.com/">Read more!</a></h4>
+      <h4 className="author"><b>By: Marc Matsumoto</b></h4>
       
       <img
         src="/images/spaghetti.jpg"
