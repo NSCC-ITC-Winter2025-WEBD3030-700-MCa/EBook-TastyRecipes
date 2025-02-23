@@ -92,6 +92,10 @@ export default function Component() {
         
         </ol>
       </p>
+      {/* Back to Main Page Link */}
+      <p className="Home">
+        <a href="/" className="back-link">Home</a>
+      </p>
 
     </div>
   );
