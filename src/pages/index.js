@@ -8,7 +8,7 @@ const IndexPage = () => {
     { id: 2, title: 'Vegetable Stir-Fry', imageurl: "/images/vegStirFry.jpg", category: 'Vegetarian', description: 'Healthy and delicious', link: '/recipes/vegetarian-stir-fry' },
     { id: 3, title: 'Chocolate Cake', imageurl: "/images/chocolatecake.jpg", category: 'Desserts', description: 'Sweet and rich dessert', link: '/recipes/chocolate-cake' },
     { id: 4, title: 'Classic Lasagna', imageurl: "/images/lasagna.jpg", category: 'Pasta', description: 'Layered with cheese and sauce', link: '/recipes/lasagna' },
-    { id: 4, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
+    { id: 5, title: "Breanna's Loaded Mashed Potatoes", imageurl: "/images/potatoes.jpg", category: 'Sides', description: 'Loaded with cheese and bacon bits', link: '/recipes/potatoes' },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -25,7 +25,7 @@ const IndexPage = () => {
 
     useEffect(() => {
       if (theme === 'light') {
-        document.body.style.backgroundColor = '#8abd98';  // Light background
+        document.body.style.backgroundColor = '#556B2F';  // Light background
         document.body.style.color = '#333';  // Light text color
       } else {
         document.body.style.backgroundColor = '#36593f';  // Dark background
