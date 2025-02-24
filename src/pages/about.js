@@ -61,7 +61,6 @@ const AboutPage = () => {
         <p><strong>Head Office:</strong> 123 Heritage Street, Halifax, Nova Scotia, Canada</p>
         <p><strong>Phone:</strong> +1 (800) 555-1234</p>
         <p><strong>Email:</strong> <a href="mailto:support@todayinhistory.com">support@todayinhistory.com</a></p>
-        <p><strong>Website:</strong> <a href="https://www.todayinhistory.com">www.todayinhistory.com</a></p>
         <p><strong>Business Hours:</strong> Monday to Friday, 9 AM to 5 PM (AST)</p>
         <p><strong>Customer Support:</strong> Available 24/7 via email and phone.</p>
       </div>
