@@ -79,4 +79,4 @@ Follow these steps for the best results.
 - The site uses gatsby-source-filesystem and gatsby-transformer-remark to process Markdown files. Ensure these plugins are configured in gatsby-config.js.
 - Recipe pages are generated dynamically in gatsby-node.js.
 
-## 1 Example of MD FILE "chocolate-cake.md" in folder src/pages/receipes/chocolate-cake.md
+## 1 Example of MD FILE "chocolate-cake.md" in folder src/pages/recipes/chocolate-cake.md
