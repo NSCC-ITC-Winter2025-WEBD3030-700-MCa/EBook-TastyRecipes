@@ -34,7 +34,7 @@ const IndexPage = () => {
     }, [theme]);
 
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
+    <div style={{ maxWidth: '1500px', margin: '0 auto', textAlign: 'center'}}>
       
          {/* Mode Toggle Button */}
          <button
@@ -131,7 +131,8 @@ const styles = {
   navbar: {
     fontFamily: 'Pacifico, sans-serif',
     backgroundColor: '#CCFFE5',
-    padding: '15px 20px',
+    padding: '7.5px 10px',
+    margin: 'none !important',
     width: '100%',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     transition: 'all 0.3s ease-in-out',
@@ -174,7 +175,6 @@ const styles = {
 
   /* ✅ Categories Section */
   categories: {
-    marginTop: '20px',
     textAlign: 'center',
   },
   categoryButtons: {
@@ -215,7 +215,8 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '10px',
     padding: '20px',
-    maxWidth: '300px',
+    width: '300px',
+    maxWidth: '430px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   },
@@ -237,7 +238,12 @@ const styles = {
     display: 'inline-block',
     transition: 'background 0.3s ease',
   },
-
+  cardImage: {
+    width: '300px',
+    height: '200px',
+    objectFit: "cover", // Ensures images don't stretch
+    borderRadius: "8px",
+  },
   /* ✅ Footer */
   footer: {
     backgroundColor: '#CCFFE5',
